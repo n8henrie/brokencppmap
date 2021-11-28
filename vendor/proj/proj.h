@@ -1,5 +1,4 @@
 #include <map>
-#include <stdlib.h>
 #include <string>
 
 class Configuration : public std::map <std::string, std::string>
