@@ -8,8 +8,8 @@ mod tests {
 
     #[test]
     fn test_map() -> Result<()> {
-        let mut config = Configuration::default();
         unsafe {
+            let mut config = Configuration::new();
             dbg!("before");
             // config.set_inherited();
             config.set_composed();

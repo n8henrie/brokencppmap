@@ -1,20 +1,22 @@
 #include "proj.h"
+#include <map>
 #include <iostream>
 
-void Configuration::set_inherited() {
-    (*this)["foo"] = "bar";
+struct Configuration::ConfigImpl {
+    std::map<std::string, std::string> map;
+};
+
+Configuration::Configuration() : impl(new ConfigImpl) {}
+
+Configuration::~Configuration() {
+    delete impl;
 }
 
-void Configuration::print_inherited() {
-    auto found = find ("foo");
-    std::cout << found -> second << std::endl;
-}
-
-void Configuration::set_composed() {
-    submap["baz"] = "qux";
+void Configuration::set_composed() {;
+    impl->map["baz"] = "qux";
 }
 
 void Configuration::print_composed() {
-    auto found = submap.find("baz");
+    auto found = impl->map.find("baz");
     std::cout << found -> second << std::endl;
 }
