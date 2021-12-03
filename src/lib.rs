@@ -15,6 +15,7 @@ mod tests {
             dbg!("post-set");
             printInherited(config);
             dbg!("done");
+            delConfig(config);
         }
         Ok(())
     }
@@ -28,6 +29,7 @@ mod tests {
             dbg!("post-set");
             printComposed(config);
             dbg!("done");
+            delConfig(config);
         }
         Ok(())
     }

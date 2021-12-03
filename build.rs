@@ -16,6 +16,7 @@ fn main() -> Result<()> {
         .header("wrapper.h")
         .clang_arg("-Ivendor/proj")
         .allowlist_function("newConfig")
+        .allowlist_function("delConfig")
         .allowlist_function("setInherited")
         .allowlist_function("printInherited")
         .allowlist_function("setComposed")
