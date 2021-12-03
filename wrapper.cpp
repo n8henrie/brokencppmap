@@ -32,6 +32,24 @@ void printInherited(config_t *c) {
     obj->print_inherited();
 }
 
+void setComposed(config_t *c) {
+    Configuration *obj;
+    if (c == NULL) {
+        return;
+    }
+    obj = static_cast<Configuration *>(c->obj);
+    obj->set_composed();
+}
+
+void printComposed(config_t *c) {
+    Configuration *obj;
+    if (c == NULL) {
+        return;
+    }
+    obj = static_cast<Configuration *>(c->obj);
+    obj->print_composed();
+}
+
 void delConfig(config_t *c) {
     if (c == NULL) {
         return;
@@ -39,23 +57,3 @@ void delConfig(config_t *c) {
     delete static_cast<Configuration *>(c->obj);
     free(c);
 }
-
-// void Configuration::print_inherited() {
-//     std::cout << "trying print inherited" << std::endl;
-//     auto found = find ("foo");
-//     std::cout << found -> second << std::endl;
-//     std::cout << "done" << std::endl;
-// }
-//
-// void Configuration::set_composed() {
-//     std::cout << "trying set composed" << std::endl;
-//     (*this).submap["baz"] = "qux";
-//     std::cout << "done" << std::endl;
-// }
-//
-// void Configuration::print_composed() {
-//     std::cout << "trying print composed" << std::endl;
-//     auto found = submap.find("baz");
-//     std::cout << found -> second << std::endl;
-//     std::cout << "done" << std::endl;
-// }

@@ -11,6 +11,8 @@ config_t *newConfig();
 void delConfig(config_t *c);
 void setInherited(config_t *c);
 void printInherited(config_t *c);
+void setComposed(config_t *c);
+void printComposed(config_t *c);
 
 #ifdef __cplusplus
 }
