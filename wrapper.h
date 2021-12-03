@@ -1,5 +1,3 @@
-typedef void* CConfiguration;
-
 #ifdef __cplusplus
 extern "C" {
 #endif
