@@ -1,4 +1,8 @@
-# This repo will be deleted soon.
+# brokencppmap
 
-It's just an example to make it easier for me to ask for help on the Rust
-forums: <https://users.rust-lang.org/t/bindgen-ffi-to-c-map-invalid-memory-reference>.
+This repo is a my first attempt at wrapping C++ in C for use with Rust via
+bindgen.
+
+See discussion on the Rust forums [here][0].
+
+[0]: https://users.rust-lang.org/t/bindgen-ffi-to-c-map-invalid-memory-reference
