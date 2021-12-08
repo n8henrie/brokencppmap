@@ -2,15 +2,14 @@
 extern "C" {
 #endif
 
-struct config;
-typedef struct config config_t;
+typedef struct Configuration Configuration;
 
-config_t *newConfig();
-void delConfig(config_t *c);
-void setInherited(config_t *c);
-void printInherited(config_t *c);
-void setComposed(config_t *c);
-void printComposed(config_t *c);
+Configuration *newConfig();
+void delConfig(Configuration *c);
+void setInherited(Configuration *c);
+void printInherited(Configuration *c);
+void setComposed(Configuration *c);
+void printComposed(Configuration *c);
 
 #ifdef __cplusplus
 }

@@ -10,6 +10,7 @@ fn main() -> Result<()> {
         .cpp(true)
         .files(src.iter())
         .flag("-std=c++11")
+        .warnings(false)
         .compile("proj");
 
     let bindings = bindgen::Builder::default()
