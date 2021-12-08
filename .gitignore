@@ -2,3 +2,4 @@
 Cargo.lock
 vendor/proj/proj
 *.so
+main
