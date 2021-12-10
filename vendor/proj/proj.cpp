@@ -10,7 +10,9 @@ void Configuration::set_inherited() {
 void Configuration::print_inherited() {
     std::cout << "trying print inherited" << std::endl;
     auto found = find ("foo");
-    std::cout << found -> second << std::endl;
+    if (found != end()) {
+      std::cout << found -> second << std::endl;
+    }
     std::cout << "done" << std::endl;
 }
 
@@ -23,6 +25,8 @@ void Configuration::set_composed() {
 void Configuration::print_composed() {
     std::cout << "trying print composed" << std::endl;
     auto found = submap.find("baz");
-    std::cout << found -> second << std::endl;
+    if (found != end()) {
+      std::cout << found -> second << std::endl;
+    }
     std::cout << "done" << std::endl;
 }
